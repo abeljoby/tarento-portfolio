@@ -59,9 +59,23 @@ body {
 }
 
 header {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
+  background: url('book-stitching-texture.png') no-repeat;
+  background-size: 100% 100%;
+  height: 5rem;
+  text-align: center;
+  align-content: center;
+  color: gold;
+}
+
+header h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(90deg, #fffbe6 0%, #ffd700 40%, #bfa100 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 nav {
