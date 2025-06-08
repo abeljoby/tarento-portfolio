@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom CSS */
 
 body {
-    /* display: flex; */
+  font-family: 'Georgia', 'Baskerville', 'Garamond', 'Times New Roman', serif;
 }
 
 header {
@@ -90,22 +90,34 @@ nav {
 nav a {
   display: flex;
   align-items: center;
-  padding-left: 4px;
-  width: 7rem;
+  padding-left: 20px;
+  width: 8rem;
   height: 3.5rem;
-  background: linear-gradient(180deg, #e53935 0%, #b71c1c 100%);
+  background: linear-gradient(180deg, #b71c1c 0%, #7f1010 100%);
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   border-radius: 0 6px 6px 0;
   position: relative;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
-  clip-path: polygon(0 0, 100% 0, 70% 50%, 100% 100%, 0 100%);
-  /* border-left: 4px solid #c62828; */
-  transition: background 0.2s;
+  clip-path: polygon(-16px 0, 100% 0, 80% 50%, 100% 100%, -16px 100%);
+  transition: background 0.2s, transform 0.2s;
+  margin-left: -16px; /* create visible overflow */
+  z-index: 1;
 }
+
+nav a span {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
 nav a:hover {
   background: linear-gradient(180deg, #f44336 0%, #c62828 100%);
+  transform: translateX(16px);
+}
+
+nav a:hover span {
+  transform: translateX(16px) scaleX(1.08);
 }
 
 main {
@@ -119,7 +131,7 @@ main {
 section {
     border-radius: 10px;
     width: 100%;
-    padding: 32px 8rem;
+    padding: 32px 32px 2rem 8rem;
     line-height: 32px;
     font-size: 22px;
 }
